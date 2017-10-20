@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularServiceClient", "AngularServiceClient\AngularServiceClient.csproj", "{9BFD68C3-B3EF-4F0B-B5EF-24C98DA9E8EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccesoDatos.Northwind", "AccesoDatos.Northwind\AccesoDatos.Northwind.csproj", "{4DDA27A4-37FF-4BC5-B97E-914D032B5AB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades.Northwind", "Entidades.Northwind\Entidades.Northwind.csproj", "{39902FDA-AC70-4146-AABD-026E7A1E5C7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccesoDatos.Northwind.Test", "AccesoDatos.Northwind.Test\AccesoDatos.Northwind.Test.csproj", "{65A47EAF-EEB2-4FA9-8880-6CDDD1ADF197}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicaNegocio.Northwind", "LogicaNegocio.Northwind\LogicaNegocio.Northwind.csproj", "{45F147C0-C96F-4AD0-83DF-EE9D08DD1F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IU.Northwind", "IU.Northwind\IU.Northwind.csproj", "{3B5BAE1A-E69A-4877-97D5-A4CE946D6450}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BFD68C3-B3EF-4F0B-B5EF-24C98DA9E8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFD68C3-B3EF-4F0B-B5EF-24C98DA9E8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFD68C3-B3EF-4F0B-B5EF-24C98DA9E8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFD68C3-B3EF-4F0B-B5EF-24C98DA9E8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDA27A4-37FF-4BC5-B97E-914D032B5AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDA27A4-37FF-4BC5-B97E-914D032B5AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDA27A4-37FF-4BC5-B97E-914D032B5AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDA27A4-37FF-4BC5-B97E-914D032B5AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39902FDA-AC70-4146-AABD-026E7A1E5C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39902FDA-AC70-4146-AABD-026E7A1E5C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39902FDA-AC70-4146-AABD-026E7A1E5C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39902FDA-AC70-4146-AABD-026E7A1E5C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A47EAF-EEB2-4FA9-8880-6CDDD1ADF197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A47EAF-EEB2-4FA9-8880-6CDDD1ADF197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A47EAF-EEB2-4FA9-8880-6CDDD1ADF197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A47EAF-EEB2-4FA9-8880-6CDDD1ADF197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45F147C0-C96F-4AD0-83DF-EE9D08DD1F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F147C0-C96F-4AD0-83DF-EE9D08DD1F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F147C0-C96F-4AD0-83DF-EE9D08DD1F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F147C0-C96F-4AD0-83DF-EE9D08DD1F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5BAE1A-E69A-4877-97D5-A4CE946D6450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5BAE1A-E69A-4877-97D5-A4CE946D6450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5BAE1A-E69A-4877-97D5-A4CE946D6450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5BAE1A-E69A-4877-97D5-A4CE946D6450}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF4FBACF-FB45-423B-9A28-5E17C59CD188}
+	EndGlobalSection
+EndGlobal
