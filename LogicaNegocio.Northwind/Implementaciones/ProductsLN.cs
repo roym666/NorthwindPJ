@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Entidades.Northwind;
 using AccesoDatos.Northwind.Interfaces;
+using System.Linq;
 
 namespace LogicaNegocio.Northwind.Implementaciones
 {
@@ -23,8 +24,8 @@ namespace LogicaNegocio.Northwind.Implementaciones
 
         public IEnumerable<Products> BuscarPorNombre(Products entity)
         {
-
-            return this._unidadDeTrabajoLN.Products.Buscar(p => p.ProductName  == entity.ProductName);
+            var lstrIncludes = new List<string>() { "Category", "Supplier" };
+            return this._unidadDeTrabajoLN.Products.Buscar(p => p.ProductName.Contains(entity.ProductName), lstrIncludes).ToList();
         }
 
         public bool fnEliminar(Products entity)

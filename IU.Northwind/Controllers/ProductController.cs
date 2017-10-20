@@ -24,7 +24,7 @@ namespace IU.Northwind.Controllers
             return View();
         }
 
-        [Route("api/Persona")]
+        [Route("api/Product/{nombre}")]
         public JsonResult Buscar(string nombre = "")
         {
             try
@@ -54,8 +54,7 @@ namespace IU.Northwind.Controllers
             catch
             {
                 throw;
-            }
-       
+            }       
         }
     }
 }
