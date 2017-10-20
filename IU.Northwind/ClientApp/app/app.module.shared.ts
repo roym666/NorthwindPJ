@@ -11,6 +11,8 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { ProductComponent } from './components/product/product.component';
 
+import { ProductService } from './components/product/product.service';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -32,7 +34,7 @@ import { ProductComponent } from './components/product/product.component';
             { path: 'product', component: ProductComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+    ], providers: [ProductService]
 })
 export class AppModuleShared {
 }

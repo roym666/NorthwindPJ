@@ -18,11 +18,6 @@ namespace IU.Northwind.Controllers
         {
             this._objProduct = objProductLN;
         }
-        // GET: /<controller>/
-        public IActionResult Index()
-        {          
-            return View();
-        }
 
         [Route("api/Product/{nombre}")]
         public JsonResult Buscar(string nombre = "")
