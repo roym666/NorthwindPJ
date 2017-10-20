@@ -12,7 +12,6 @@ namespace IU.Northwind.Controllers
 {
     public class ProductController : Controller
     {
-
         private IProductsLN _objProduct { get; set; }
 
         public ProductController(IProductsLN objProductLN)
