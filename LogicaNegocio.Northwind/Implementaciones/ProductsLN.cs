@@ -25,7 +25,7 @@ namespace LogicaNegocio.Northwind.Implementaciones
         public IEnumerable<Products> BuscarPorNombre(Products entity)
         {
             var lstrIncludes = new List<string>() { "Category", "Supplier" };
-            return this._unidadDeTrabajoLN.Products.Buscar(p => p.ProductName.Contains(entity.ProductName), lstrIncludes).ToList();
+            return this._unidadDeTrabajoLN.Products.Buscar(p => p.ProductName.Contains(entity.ProductName) || string.IsNullOrEmpty(entity.ProductName), lstrIncludes).ToList();
         }
 
         public bool fnEliminar(Products entity)

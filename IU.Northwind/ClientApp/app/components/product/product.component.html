@@ -1,1 +1,33 @@
 ﻿<h1>Lista de Productos</h1>
+<div>
+    <label>Filtro por nombre: </label>
+    <input [(ngModel)]="palabraBusqueda" (keyup)="search()" />
+</div>
+<table class="table table-bordered table-striped" *ngIf="productList.length > 0">
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Supplier</th>
+            <th>quantityPerUnit</th>
+            <th>Price</th>
+            <th>Inventory</th>
+            <th>Ver Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of productList">
+            <td>{{p.productId}}</td>
+            <td>{{p.productName}}</td>
+            <td>{{p.categoryName}}</td>
+            <td>{{p.supplierName}}</td>
+            <td>{{p.quantityPerUnit}}</td>
+            <td>{{p.unitPrice | currency:'USD':true}}</td>
+            <td>{{p.unitsInStock}}</td>
+            <td>
+                <button class="btn btn-info" [routerLink]="['/product-detail', p.productId]" [queryParams]="{filterBy: palabraBusqueda}"><span class="glyphicon glyphicon-expand"></span>Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

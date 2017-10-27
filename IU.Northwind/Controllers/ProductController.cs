@@ -10,6 +10,7 @@ using Entidades.Northwind;
 
 namespace IU.Northwind.Controllers
 {
+    [Route("api/Product")]
     public class ProductController : Controller
     {
         private IProductsLN _objProduct { get; set; }
@@ -19,7 +20,7 @@ namespace IU.Northwind.Controllers
             this._objProduct = objProductLN;
         }
 
-        [Route("api/Product/{nombre}")]
+        [HttpGet()]
         public JsonResult Buscar(string nombre = "")
         {
             try
@@ -39,9 +40,9 @@ namespace IU.Northwind.Controllers
                         ReorderLevel = p.ReorderLevel,
                         Discontinued = p.Discontinued,
                         CategoryId = p.CategoryId,
-                        CategoryName = p.Category.CategoryName,
+                        CategoryName = p.Category?.CategoryName,
                         SupplierId = p.SupplierId,
-                        SupplierName = p.Supplier.CompanyName
+                        SupplierName = p.Supplier?.CompanyName
 
                     })
                 });
@@ -49,7 +50,23 @@ namespace IU.Northwind.Controllers
             catch
             {
                 throw;
-            }       
+            }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetProduct([FromRoute] int id)
+        {
+            try
+            {
+                var product = new Products() { ProductId = id };
+                var consulta = _objProduct.Buscar(product).FirstOrDefault();
+                return Ok(consulta);
+            }
+
+            catch
+            {
+                throw;
+            }
         }
     }
 }
