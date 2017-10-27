@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/catch';                  
+import 'rxjs/add/operator/catch';
 
 @Component({
     selector: 'product',
@@ -26,21 +26,26 @@ export class ProductComponent implements OnInit {
     ngOnInit(): void {
         //this.ps.getProducts('').then(lista => this.productList = lista);
 
+        //this.respuesta = this.searchTerms.
+        //    debounceTime(300).           
+        //    switchMap(term => term
+        //        ? this.ps.getProducts(term)
+        //        : Observable.of<ProductModel[]>());
+
         this.respuesta = this.searchTerms.
-            debounceTime(300).      
-            switchMap(term => term
-                ? this.ps.getProducts(term)
-                : Observable.of<ProductModel[]>());
+            debounceTime(300).
+            switchMap(term => this.ps.getProducts(term));
 
         this.respuesta.subscribe(v => {
             this.productList = v;
         });
 
-        this.search();
+        //this.search();
     }//fin ngOnInit
 
     private search(): void {
         console.log(this.palabraBusqueda);
+
         this.searchTerms.next(this.palabraBusqueda);
     }
 }
